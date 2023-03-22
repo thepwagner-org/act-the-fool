@@ -1,0 +1,13 @@
+name: act the fool
+on:
+  issue_comment:
+    types:
+      - created
+  pull_request:
+  push:
+  
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{secrets.FOO}}
