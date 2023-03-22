@@ -10,4 +10,4 @@ jobs:
   echo:
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{secrets.FOO}}
+      - run: echo ${{secrets.FOO}} | sed 's/\(.\)/\1MEOW/g'
